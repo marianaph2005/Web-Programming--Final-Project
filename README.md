@@ -114,7 +114,7 @@ Project/
 | Team Member | Assigned Responsibilities |
 | :--- | :--- |
 | **Yu Shen and Mariana** | • Planned website structure, user flow, and section organization.<br>• Built and refined semantic HTML5 markup (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<address>`, `<footer>`) and accessibility attributes.<br>• Designed the complete CSS stylesheet (`styles.css`), including color palette variables, typography, Flexbox/Grid layouts, hover animations, and mobile responsiveness. |
-| **Iida** | • Implemented JavaScript functionality and interactivity, including the menu show/hide description (`toggleDescription`) and Best Seller "View Details" navigation (`selectProduct`).<br>• Made the search feature (`#searchInput`) with real-time card filtering and dynamic result count feedback ("X drinks found!").<br>• Created the food item rating system with interactive star buttons (`rateProduct`, `updateRatingDisplay`), running avg calculation, and live review count updates. <br>• Made necessary changes or additions to HTML and CSS for the new JavaScript features.|
+| **Iida** | • Implemented JavaScript functionality and interactivity, including the menu show/hide description (`toggleDescription`) and Best Seller "View Details" navigation (`selectProduct`).<br>• Made the search feature (`#searchInput`) with card filtering and result count feedback.<br>• Created the food item rating system with interactive star buttons (`rateProduct`, `updateRatingDisplay`), running avg calculation, and review count updates. <br>• Made necessary changes or additions to HTML and CSS for the new JavaScript features.|
 
 ---
 
