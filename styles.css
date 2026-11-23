@@ -472,6 +472,12 @@ nav a:hover {
     box-shadow: 0 0 0 4px rgba(143, 163, 126, 0.25);
 }
 
+.search-count-text {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    margin-bottom: 0;
+}
 
 /* Product Details */
 
@@ -522,6 +528,16 @@ nav a:hover {
     border-radius: 20px;
     color: var(--text);
     font-size: 14.5px;
+}
+
+.star-btn {
+    background: none !important;
+    border: none !important;
+    color: var(--accent) !important;
+    font-size: 20px !important;
+    padding: 0 2px !important;
+    box-shadow: none !important;
+    cursor: pointer;
 }
 
 .quantity-control {

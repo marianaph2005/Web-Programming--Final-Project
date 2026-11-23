@@ -83,7 +83,7 @@
                     <h3>Matcha Latte</h3>
                     <p class="price">KRW 4200</p>
                     <div class="card-actions">
-                        <a href="#product" onclick="selectProduct('Matcha Latte')">View Details</a>
+                       <button type="button" onclick="selectProduct('Matcha Latte')">View Details</button>
                     </div>
                 </div>
             </article>
@@ -97,7 +97,7 @@
                     <h3>Hojicha Mousse</h3>
                     <p class="price">KRW 4200</p>
                     <div class="card-actions">
-                        <a href="#product" onclick="selectProduct('Hojicha Mousse')">View Details</a>
+                        <button type="button" onclick="selectProduct('Hojicha Mousse')">View Details</button>
                     </div>
                 </div>
             </article>
@@ -111,7 +111,7 @@
                     <h3>Signature Milk Tea</h3>
                     <p class="price">KRW 4200</p>
                     <div class="card-actions">
-                        <a href="#product" onclick="selectProduct('Signature Milk Tea')">View Details</a>
+                        <button type="button" onclick="selectProduct('Signature Milk Tea')">View Details</button>
                     </div>
                 </div>
             </article>
@@ -131,6 +131,7 @@
         <div class="search-bar">
             <label for="searchInput" class="visually-hidden">Search drinks</label>
             <input type="text" id="searchInput" placeholder="Search your favourite drink...">
+            <p id="searchResultCount" class="search-count-text"></p>
         </div>
 
         <div id="menuGrid" class="product-container">
@@ -253,7 +254,19 @@
             <h2 id="detailName">Matcha Latte</h2>
             <h3 id="detailPrice">KRW 4200</h3>
             <p id="detailDescription">Experience the smooth and refreshing taste of our signature Matcha Latte. Made with premium Japanese matcha and creamy fresh milk.</p>
-            <p class="rating-badge"><strong>Customer Rating:</strong> <span id="detailRating">★★★★★ 4.8/5</span></p>
+            
+    <div class="rating-badge">
+            <strong>Customer Rating:</strong> 
+            <span id="starButtons" aria-label="Rate this drink">
+                 <button type="button" class="star-btn" onclick="rateProduct(1)">☆</button>
+                 <button type="button" class="star-btn" onclick="rateProduct(2)">☆</button>
+                 <button type="button" class="star-btn" onclick="rateProduct(3)">☆</button>
+                 <button type="button" class="star-btn" onclick="rateProduct(4)">☆</button>
+                 <button type="button" class="star-btn" onclick="rateProduct(5)">☆</button>
+            </span>
+            <span id="detailRating">0.0/5 (0 reviews)</span>
+        </div>
+
             <div class="quantity-control">
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" value="1" min="1">
