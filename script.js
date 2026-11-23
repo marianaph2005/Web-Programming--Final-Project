@@ -63,7 +63,7 @@ function toggleDescription(descId) {
 }
 
 //4. Additional Features
-// 4.1 Search / Filter Menu Items
+// 4.1 Search Menu Items
 const searchInput = document.getElementById("searchInput");
 
 if (searchInput) {
@@ -87,7 +87,7 @@ if (searchInput) {
       }
     });
 
-    // Update the result text based on count
+    // Update the result text based on count aka how many drinks found
     if (countElement) {
       if (query === "") {
         countElement.textContent = ""; // Clear text if search bar is empty
@@ -100,4 +100,54 @@ if (searchInput) {
       }
     }
   });
+}
+
+//4.4. Food Item Rating System
+//Food Item Rating System (when clicking a star button 1-5)
+function rateProduct(stars) {
+  const item = products[currentProduct];
+  if (!item) return;
+
+  //Push the user's star rating into the current drink's rating array
+  item.ratings.push(stars);
+  
+  // Refresh the display aka rating
+  updateRatingDisplay(currentProduct);
+}
+
+//Update the Rating on the Product Detail Page
+function updateRatingDisplay(productName) {
+  const item = products[productName];
+  if (!item) return;
+  
+  const ratings = item.ratings;
+  const starButtons = document.querySelectorAll("#starButtons .star-btn");
+  const detailRating = document.getElementById("detailRating");
+
+  if (ratings.length === 0) {
+    if (starButtons.length > 0) {
+      starButtons.forEach(btn => btn.textContent = "☆");
+    }
+    if (detailRating) {
+      detailRating.textContent = "0.0/5 (0 reviews)";
+    }
+    return;
+  }
+
+  // Calculate the new avg
+  const sum = ratings.reduce((total, score) => total + score, 0);
+  const avg = sum / ratings.length;
+  const roundedStars = Math.round(avg);
+
+  // Light up the interactive detail stars up to the avg rating
+  if (starButtons.length > 0) {
+    starButtons.forEach((btn, index) => {
+      btn.textContent = index < roundedStars ? "★" : "☆";
+    });
+  }
+
+  // Update the text score and review count
+  if (detailRating) {
+    detailRating.textContent = `${avg.toFixed(1)}/5 (${ratings.length} ${ratings.length === 1 ? "review" : "reviews"})`;
+  }
 }

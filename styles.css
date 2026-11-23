@@ -530,6 +530,16 @@ nav a:hover {
     font-size: 14.5px;
 }
 
+.star-btn {
+    background: none !important;
+    border: none !important;
+    color: var(--accent) !important;
+    font-size: 20px !important;
+    padding: 0 2px !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
 .quantity-control {
     margin: 18px 0 24px;
     display: flex;
