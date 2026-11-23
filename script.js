@@ -62,6 +62,26 @@ function toggleDescription(descId) {
   }
 }
 
+//(1.2. Best Seller View Details Buttons to Product Detail Page)
+function selectProduct(productName) {
+  const item = products[productName];
+  if (!item) return;
+
+  currentProduct = productName;
+
+  document.getElementById("detailName").textContent = productName;
+  document.getElementById("detailPrice").textContent = item.price;
+  document.getElementById("detailDescription").textContent = item.description;
+  document.getElementById("detailImage").src = item.image;
+  document.getElementById("detailImage").alt = productName;
+  document.getElementById("quantity").value = 1;
+
+  updateRatingDisplay(productName);
+
+  // Smoothly scrolls down to the product detail section
+  document.getElementById("product").scrollIntoView({ behavior: "smooth" });
+}
+
 //4. Additional Features
 // 4.1 Search Menu Items
 const searchInput = document.getElementById("searchInput");
