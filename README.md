@@ -12,7 +12,7 @@
 | **Yu Shen** | `ID` | HTML Structure & CSS Styling |
 | **Mariana Portillo Hernandez** | `26170195` | HTML Structure & CSS Styling |
 | **Cheau Si** | `ID` | JavaScript Functionality & Testing |
-| **Iida** | `ID` | JavaScript Functionality & Testing |
+| **Iida** | `26170209` | JavaScript Functionality & Testing |
 | **Ji min** | `ID` | JavaScript Functionality & Testing |
 
 ---
@@ -94,6 +94,19 @@ Project/
 
 ### C. JavaScript Functionality & Interactivity
 
+1.1. **Show/Hide Product Description on Click**:
+   - Uses the `toggleDescription(descId)` function to control visibility: checks if the drink description attribute is hidden, toggles it on click, and dynamically updates the button text between `View Description` and `Hide Description`.
+
+1.2. **Best Seller View Details**:
+   - Uses the `selectProduct(productName)` function to instantly fetch product data and update the dynamic preview box (`#detailName`, `#detailPrice`, `#detailDescription`, `#detailImage`) when users click view details on featured best sellers or menu items order now button.
+   - Automatically triggers a smooth scroll (`scrollIntoView`) down to the `#product` section for a seamless user experience.
+
+4.1. **Search Menu Items and Count Found Results**:
+   - An event listener on `#searchInput` captures user input in real-time, matching drink titles against the query, hiding non-matching cards, and updating the `#searchResultCount` text dynamically (*"1 drink found!"*, *"X drinks found!"*, or *"No drinks found."*).
+
+4.4 **Food Item Rating System & Average Calculator**:
+   - Implements interactive star buttons (`rateProduct(stars)`) that allow users to submit ratings from 1 to 5 stars, pushing scores into a dynamic data array per product.
+   - The `updateRatingDisplay(productName)` function automatically calculates the running average score, lights up the corresponding star buttons (`★` vs `☆`), and updates the review count display (`#detailRating`) in real-time.
 ---
 
 ## 5. Division of Tasks
@@ -101,7 +114,7 @@ Project/
 | Team Member | Assigned Responsibilities |
 | :--- | :--- |
 | **Yu Shen and Mariana** | • Planned website structure, user flow, and section organization.<br>• Built and refined semantic HTML5 markup (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<address>`, `<footer>`) and accessibility attributes.<br>• Designed the complete CSS stylesheet (`styles.css`), including color palette variables, typography, Flexbox/Grid layouts, hover animations, and mobile responsiveness. |
-| **** | • Implemented JavaScript .<br>• ---- <br>• ---- |
+| **Iida** | • Implemented JavaScript functionality and interactivity, including the menu show/hide description (`toggleDescription`) and Best Seller "View Details" navigation (`selectProduct`).<br>• Made the search feature (`#searchInput`) with real-time card filtering and dynamic result count feedback ("X drinks found!").<br>• Created the food item rating system with interactive star buttons (`rateProduct`, `updateRatingDisplay`), running avg calculation, and live review count updates. <br>• Made necessary changes or additions to HTML and CSS for the new JavaScript features.|
 
 ---
 
