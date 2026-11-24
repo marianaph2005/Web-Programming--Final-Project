@@ -11,7 +11,7 @@
 | :--- | :--- | :--- |
 | **Yu Shen** | `ID` | HTML Structure & CSS Styling |
 | **Mariana Portillo Hernandez** | `26170195` | HTML Structure & CSS Styling |
-| **Cheau Si** | `ID` | JavaScript Functionality & Testing |
+| **Cheau Si** | `26170140` | JavaScript Functionality & Testing |
 | **Iida** | `26170209` | JavaScript Functionality & Testing |
 | **Ji min** | `ID` | JavaScript Functionality & Testing |
 
