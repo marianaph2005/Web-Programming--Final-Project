@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +20,17 @@
         </a>
         <h1>KOCHA</h1>
     </div>
+
     <nav aria-label="Main Navigation">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#cart">Cart(<span id="cartCount">0</span>)</a></li>
+            <li><a href="#menu">Product</a></li>
+            <li>
+                <a href="#" id="cartToggle">
+                    Cart(<span id="cartCount">0</span>)
+                </a>
+            </li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#about">About Us</a></li>
         </ul>
@@ -33,47 +39,48 @@
 
 <main>
 
-    <!-- Welcome / Hero Section -->
-    <section id="home" class="hero" aria-labelledby="hero-heading">
+    <section id="home" class="hero">
         <div class="hero-content">
             <span class="section-tag">Online Beverage Ordering</span>
-            <h2 id="hero-heading">Sip Good. Feel Good.</h2>
+            <h2>Sip Good. Feel Good.</h2>
             <p>Premium beverages, crafted for a better you. Discover your favourite drinks at KOCHA.</p>
             <a href="#menu" class="btn">Explore Menu</a>
         </div>
+
         <figure class="hero-image">
             <img src="images/Matcha Latte.png" alt="Matcha Latte">
         </figure>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits" aria-label="Our Benefits">
+    <section class="benefits">
         <article>
-            <span class="benefit-badge" aria-hidden="true">&#10022;</span>
+            <span class="benefit-badge">&#10022;</span>
             <h3>Premium Ingredients</h3>
             <p>Quality ingredients in every cup.</p>
         </article>
+
         <article>
-            <span class="benefit-badge" aria-hidden="true">&#10022;</span>
+            <span class="benefit-badge">&#10022;</span>
             <h3>Freshly Prepared</h3>
             <p>Fresh drinks made with care.</p>
         </article>
+
         <article>
-            <span class="benefit-badge" aria-hidden="true">&#10022;</span>
+            <span class="benefit-badge">&#10022;</span>
             <h3>Great Taste</h3>
             <p>Enjoy your favourite flavours.</p>
         </article>
     </section>
 
-    <!-- Featured Best Sellers Section -->
-    <section class="featured" aria-labelledby="featured-heading">
+    <section class="featured">
         <div class="section-title-group">
             <span class="section-tag">Customer Favourites</span>
-            <h2 id="featured-heading">Our Best Sellers</h2>
+            <h2>Our Best Sellers</h2>
             <p>Discover our most popular beverages.</p>
         </div>
 
         <div class="product-container">
+
             <article class="product-card">
                 <figure class="card-image">
                     <span class="badge">Best Seller</span>
@@ -83,7 +90,7 @@
                     <h3>Matcha Latte</h3>
                     <p class="price">KRW 4200</p>
                     <div class="card-actions">
-                       <button type="button" onclick="selectProduct('Matcha Latte')">View Details</button>
+                        <button type="button" onclick="selectProduct('Matcha Latte')">View Details</button>
                     </div>
                 </div>
             </article>
@@ -115,16 +122,16 @@
                     </div>
                 </div>
             </article>
+
         </div>
 
         <a href="#menu" class="btn">View Full Menu</a>
     </section>
 
-    <!-- Full Menu Section -->
-    <section id="menu" class="menu-section" aria-labelledby="menu-heading">
+    <section id="menu" class="menu-section">
         <div class="section-title-group">
             <span class="section-tag">Full Menu</span>
-            <h2 id="menu-heading">Our Beverage Menu</h2>
+            <h2>Our Beverage Menu</h2>
             <p>Discover your favourite KOCHA drinks.</p>
         </div>
 
@@ -244,110 +251,178 @@
         </div>
     </section>
 
-    <!-- Product Detail Section -->
     <section id="product" class="product-detail" aria-labelledby="detailName">
+        <button type="button" id="closeProductDetail" class="close-product" onclick="closeProductDetail()" aria-label="Close product details">&times;</button>
+
         <figure class="product-detail-image">
             <img id="detailImage" src="images/Matcha Latte.png" alt="Matcha Latte">
         </figure>
+
         <div class="product-information">
             <span class="section-tag">Product Details</span>
             <h2 id="detailName">Matcha Latte</h2>
             <h3 id="detailPrice">KRW 4200</h3>
             <p id="detailDescription">Experience the smooth and refreshing taste of our signature Matcha Latte. Made with premium Japanese matcha and creamy fresh milk.</p>
-            
-    <div class="rating-badge">
-            <strong>Customer Rating:</strong> 
-            <span id="starButtons" aria-label="Rate this drink">
-                 <button type="button" class="star-btn" onclick="rateProduct(1)">☆</button>
-                 <button type="button" class="star-btn" onclick="rateProduct(2)">☆</button>
-                 <button type="button" class="star-btn" onclick="rateProduct(3)">☆</button>
-                 <button type="button" class="star-btn" onclick="rateProduct(4)">☆</button>
-                 <button type="button" class="star-btn" onclick="rateProduct(5)">☆</button>
-            </span>
-            <span id="detailRating">0.0/5 (0 reviews)</span>
-        </div>
+
+            <div class="rating-badge">
+                <strong>Customer Rating:</strong>
+                <span id="starButtons" aria-label="Rate this drink">
+                    <button type="button" class="star-btn" onclick="rateProduct(1)">☆</button>
+                    <button type="button" class="star-btn" onclick="rateProduct(2)">☆</button>
+                    <button type="button" class="star-btn" onclick="rateProduct(3)">☆</button>
+                    <button type="button" class="star-btn" onclick="rateProduct(4)">☆</button>
+                    <button type="button" class="star-btn" onclick="rateProduct(5)">☆</button>
+                </span>
+                <span id="detailRating">0.0/5 (0 reviews)</span>
+            </div>
 
             <div class="quantity-control">
                 <label for="quantity">Quantity:</label>
                 <input type="number" id="quantity" value="1" min="1">
             </div>
+
             <div class="detail-actions">
                 <button type="button" onclick="addToCart()">Add to Cart</button>
-                <a href="#menu" class="back-link">Back to Menu</a>
+                <button type="button" class="back-link" onclick="closeProductDetail()">Close Details</button>
             </div>
         </div>
     </section>
 
-    <!-- Shopping Cart Section -->
-    <section id="cart" class="cart-section" aria-labelledby="cart-heading">
-        <div class="section-title-group">
-            <span class="section-tag">Your Order</span>
-            <h2 id="cart-heading">Your Shopping Cart</h2>
-            <p>Review your selected beverages.</p>
-        </div>
-        <div class="cart-container">
-            <div id="cartItems" aria-live="polite">
-                <p id="emptyCart">Your shopping cart is currently empty.</p>
-            </div>
-            <aside class="order-summary" aria-label="Order Summary">
-                <h3>Order Summary</h3>
-                <p>Subtotal: KRW <span id="subtotal">0</span></p>
-                <p>Delivery Fee: KRW <span id="deliveryFee">5000</span></p>
-                <h3 class="total-line">Total: KRW <span id="total">0</span></h3>
-                <button type="button" onclick="checkout()">Proceed to Checkout</button>
-            </aside>
-        </div>
-        <div class="cart-footer-action">
-            <a href="#menu" class="back-link">Continue Shopping</a>
-        </div>
-    </section>
+    <div id="cartOverlay" class="cart-overlay">
+        <aside id="cartSidebar" class="cart-sidebar">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <div class="cart-header">
+                <div>
+                    <span class="section-tag">KOCHA ORDER</span>
+                    <h2 id="cartPageTitle">Your Shopping Cart</h2>
+                </div>
+                <button type="button" id="closeCart" class="close-cart">&times;</button>
+            </div>
+
+            <div id="cartStepCart" class="cart-step">
+                <div id="cartItems" class="cart-items">
+                    <p id="emptyCart">Your shopping cart is currently empty.</p>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <p>Subtotal: KRW <span id="subtotal">0</span></p>
+                    <p>Delivery Fee: KRW <span id="deliveryFee">0</span></p>
+                    <h3 class="total-line">Total: KRW <span id="total">0</span></h3>
+
+                    <button type="button" onclick="showCheckout()">Proceed to Checkout</button>
+                    <button type="button" id="continueShopping" class="continue-shopping">Continue Shopping</button>
+                </div>
+            </div>
+
+            <div id="cartStepCheckout" class="cart-step" hidden>
+                <button type="button" class="back-link" onclick="showCart()">← Back to Cart</button>
+                <h3 class="checkout-heading">Delivery Information</h3>
+
+                <form id="checkoutForm">
+                    <label for="checkoutName">Full Name</label>
+                    <input type="text" id="checkoutName" placeholder="Enter your name" required>
+
+                    <label for="checkoutEmail">Email Address</label>
+                    <input type="email" id="checkoutEmail" placeholder="Enter your email" required>
+
+                    <label for="checkoutPhone">Phone Number</label>
+                    <input type="tel" id="checkoutPhone" placeholder="Enter your phone number" required>
+
+                    <label for="checkoutAddress">Delivery Address</label>
+                    <textarea id="checkoutAddress" placeholder="Enter your delivery address" required></textarea>
+
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" required>
+                        <option value="">Select payment method</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                    </select>
+
+                    <div class="checkout-total">
+                        <h3>Order Total</h3>
+                        <p>KRW <span id="checkoutTotal">0</span></p>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+
+            <div id="cartStepSuccess" class="cart-step" hidden>
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h2>Order Successful!</h2>
+                    <p>Thank you for ordering from KOCHA.</p>
+                    <p>Your order has been successfully placed.</p>
+
+                    <div class="order-receipt">
+                        <h3>Order Details</h3>
+                        <p>Order ID: <strong id="orderNumber"></strong></p>
+                        <p>Name: <span id="receiptName"></span></p>
+                        <p>Email: <span id="receiptEmail"></span></p>
+                        <p>Payment: <span id="receiptPayment"></span></p>
+                        <div id="receiptItems"></div>
+                        <h3 class="receipt-total">Total: KRW <span id="receiptTotal">0</span></h3>
+                    </div>
+
+                    <button type="button" id="finishOrder">Continue Shopping</button>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <section id="contact" class="contact-section">
         <div class="contact-information">
             <span class="section-tag">Contact Us</span>
-            <h2 id="contact-heading">Get in Touch</h2>
+            <h2>Get in Touch</h2>
             <p>We would love to hear from you! Contact us for any questions or feedback.</p>
+
             <address class="contact-details">
                 <p><strong>Email:</strong> Kocha@gmail.com</p>
                 <p><strong>Phone:</strong> +82 010-1234-5678</p>
                 <p><strong>Address:</strong> Seoul, South Korea</p>
             </address>
         </div>
+
         <form id="contactForm" novalidate>
             <h3>Send Us a Message</h3>
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
             <label for="email">Your Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
             <label for="message">Your Message</label>
             <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
             <p id="formMessage" aria-live="polite"></p>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section" aria-labelledby="about-heading">
+    <section id="about" class="about-section">
         <div class="about-content">
             <span class="section-tag">Our Story</span>
-            <h2 id="about-heading">About KOCHA</h2>
+            <h2>About KOCHA</h2>
             <h3>More Than Just a Drink.</h3>
             <p>At KOCHA, we believe that every cup should bring happiness and refreshment.</p>
             <p>Our beverages are carefully prepared using quality ingredients to provide customers with delicious and enjoyable drinking experiences.</p>
             <p>From our signature Matcha Latte to refreshing fruit teas, KOCHA offers something for everyone.</p>
         </div>
+
         <figure class="about-image">
             <img src="images/logo.png" alt="KOCHA Logo">
         </figure>
     </section>
 
-    <!-- Mission and Vision Section -->
-    <section class="mission-section" aria-label="Mission and Vision">
+    <section class="mission-section">
         <article>
             <h3>Our Mission</h3>
             <p>To provide delicious and refreshing beverages using quality ingredients while creating enjoyable experiences for every customer.</p>
         </article>
+
         <article>
             <h3>Our Vision</h3>
             <p>To become a favourite beverage brand known for great taste, quality and customer satisfaction.</p>
@@ -360,12 +435,14 @@
     <h2>KOCHA</h2>
     <p>Sip Good. Feel Good.</p>
     <p>Premium beverages, crafted for a better you.</p>
-    <nav class="footer-links" aria-label="Footer Navigation">
+
+    <nav class="footer-links">
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
     </nav>
+
     <p>&copy; 2026 KOCHA. All Rights Reserved.</p>
     <p id="datetime"></p>
 </footer>
