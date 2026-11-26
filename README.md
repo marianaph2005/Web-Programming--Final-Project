@@ -9,11 +9,11 @@
 
 | Name | Student ID | Role |
 | :--- | :--- | :--- |
-| **Yu Shen** | `ID` | HTML Structure & CSS Styling |
+| **Yu Shen** | `26170123` | HTML Structure & CSS Styling |
 | **Mariana Portillo Hernandez** | `26170195` | HTML Structure & CSS Styling |
 | **Iida** | `26170209` | JavaScript : Menu description toggle, search/filter, rating system and detail popup |
-| **Zhi min** | `26170144` | JavaScript : add to cart, cart side bar and checkout |
-| **Cheau Si** | `26170140` | JavaScript : dynamic footer and contact form validation  |
+| **Zhi min** | `26170144` | JavaScript : Shopping cart, cart side bar, quantity management and checkout process |
+| **Cheau Si** | `26170140` | JavaScript : Dynamic date and time in the footer, contact form validation and user feedback  |
 
 
 ---
@@ -95,8 +95,7 @@ Project/
 
 ### C. JavaScript Functionality & Interactivity
 
-**Required features**
-
+# **Required features**
 1. **Show/Hide Product Description on Click**:
    - Uses the `toggleDescription(descId)` function to control visibility: checks if the drink description attribute is hidden, toggles it on click, and dynamically updates the button text between `View Description` and `Hide Description`.
 
@@ -106,8 +105,7 @@ Project/
 3. **Contact form validation**
    - Uses the 'setupContactForm()' to check that Name, Email and Message are filled in and validates the email format with a regular expression. A red or green confirmation message is shown, and the form is cleared on success.
 
-**Additional features**
-
+# **Additional features**
 4. **Best Seller View Details**:
    - Uses the `selectProduct(productName)` function to instantly fetch product data and update the dynamic preview box (`#detailName`, `#detailPrice`, `#detailDescription`, `#detailImage`) when users click view details on featured best sellers or menu items order now button.
    - Automatically triggers a smooth scroll (`scrollIntoView`) down to the `#product` section for a seamless user experience.
