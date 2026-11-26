@@ -11,7 +11,7 @@
 | :--- | :--- | :--- |
 | **Yu Shen** | `ID` | HTML Structure & CSS Styling |
 | **Mariana Portillo Hernandez** | `26170195` | HTML Structure & CSS Styling |
-| **Cheau Si** | `ID` | JavaScript Functionality & Testing |
+| **Cheau Si** | `26170140` | JavaScript : Menu product and interaction |
 | **Iida** | `26170209` | JavaScript Functionality & Testing |
 | **Ji min** | `26170144` | JavaScript Functionality & Testing |
 
@@ -94,6 +94,7 @@ Project/
 
 ### C. JavaScript Functionality & Interactivity
 
+Required features:
 1.1. **Show/Hide Product Description on Click**:
    - Uses the `toggleDescription(descId)` function to control visibility: checks if the drink description attribute is hidden, toggles it on click, and dynamically updates the button text between `View Description` and `Hide Description`.
 
