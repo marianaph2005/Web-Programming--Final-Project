@@ -11,9 +11,10 @@
 | :--- | :--- | :--- |
 | **Yu Shen** | `ID` | HTML Structure & CSS Styling |
 | **Mariana Portillo Hernandez** | `26170195` | HTML Structure & CSS Styling |
-| **Cheau Si** | `26170140` | JavaScript : Menu product and interaction |
-| **Iida** | `26170209` | JavaScript Functionality & Testing |
-| **Ji min** | `26170144` | JavaScript Functionality & Testing |
+| **Iida** | `26170209` | JavaScript : Menu description toggle, search/filter, rating system and detail popup |
+| **Zhi min** | `26170144` | JavaScript : add to cart, cart side bar and checkout |
+| **Cheau Si** | `26170140` | JavaScript : dynamic footer and contact form validation  |
+
 
 ---
 
@@ -94,18 +95,27 @@ Project/
 
 ### C. JavaScript Functionality & Interactivity
 
-Required features:
-1.1. **Show/Hide Product Description on Click**:
+**Required features**
+
+1. **Show/Hide Product Description on Click**:
    - Uses the `toggleDescription(descId)` function to control visibility: checks if the drink description attribute is hidden, toggles it on click, and dynamically updates the button text between `View Description` and `Hide Description`.
 
-1.2. **Best Seller View Details**:
+2. **Dynamic footer (current date and time)**
+   - Uses the 'updateDateTime()' function to show the current date and time in the footer and refreshes every second with 'setInterval'
+  
+3. **Contact form validation**
+   - Uses the 'setupContactForm()' to check that Name, Email and Message are filled in and validates the email format with a regular expression. A red or green confirmation message is shown, and the form is cleared on success.
+
+**Additional features**
+
+4. **Best Seller View Details**:
    - Uses the `selectProduct(productName)` function to instantly fetch product data and update the dynamic preview box (`#detailName`, `#detailPrice`, `#detailDescription`, `#detailImage`) when users click view details on featured best sellers or menu items order now button.
    - Automatically triggers a smooth scroll (`scrollIntoView`) down to the `#product` section for a seamless user experience.
 
-4.1. **Search Menu Items and Count Found Results**:
+5. **Search Menu Items and Count Found Results**:
    - An event listener on `#searchInput` captures user input in real-time, matching drink titles against the query, hiding non-matching cards, and updating the `#searchResultCount` text dynamically (*"1 drink found!"*, *"X drinks found!"*, or *"No drinks found."*).
 
-4.4 **Food Item Rating System & Average Calculator**:
+6. **Food Item Rating System & Average Calculator**:
    - Implements interactive star buttons (`rateProduct(stars)`) that allow users to submit ratings from 1 to 5 stars, pushing scores into a dynamic data array per product.
    - The `updateRatingDisplay(productName)` function automatically calculates the running average score, lights up the corresponding star buttons (`★` vs `☆`), and updates the review count display (`#detailRating`) in real-time.
 ---
